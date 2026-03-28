@@ -134,14 +134,14 @@ import (
     "net/http"
 
     "github.com/gin-gonic/gin"
-    "github.com/acme/app/internal/app/service"
+    "github.com/acme/app/internal/port"
 )
 
 type OrderHandler struct {
-    svc service.OrderService
+    svc port.OrderService // interface, not concrete
 }
 
-func NewOrderHandler(svc service.OrderService) *OrderHandler {
+func NewOrderHandler(svc port.OrderService) *OrderHandler {
     return &OrderHandler{svc: svc}
 }
 
@@ -173,7 +173,7 @@ func (h *OrderHandler) CreateOrder(c *gin.Context) {
         return
     }
 
-    c.JSON(http.StatusCreated, CreateOrderResponse{ID: order.ID, Status: order.Status})
+    c.JSON(http.StatusCreated, CreateOrderResponse{ID: order.ID(), Status: string(order.Status())})
 }
 ```
 

@@ -229,19 +229,6 @@ PRE-FLIGHT CHECK
 
 ---
 
-## Response Format
-
-### Standard Response (confidence >= threshold)
-
-```markdown
-{Go source code: entity, interface, or concurrency pattern}
-
-**Confidence:** {score} | **Impact:** {tier}
-**Sources:** KB: {file path} | MCP: {query} | Codebase: {file path}
-```
-
----
-
 ## Remember
 
 > **"Domain code speaks the language of the business, not the language of the framework."**

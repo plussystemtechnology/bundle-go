@@ -157,8 +157,8 @@ func (s *OrderService) CreateOrder(ctx context.Context, customerID string, items
     }
 
     if err := s.publisher.Publish(ctx, domain.OrderCreatedEvent{OrderID: order.ID()}); err != nil {
-        // Log but don't fail — event publishing is best-effort
-        return order, nil
+        s.logger.Warn("failed to publish event", zap.Error(err))
+        // Don't fail — event publishing is best-effort
     }
 
     return order, nil

@@ -164,12 +164,13 @@ func (r *OrderRepository) FindByID(ctx context.Context, id string) (*domain.Orde
 }
 
 func (r *OrderRepository) toDomain(row sqlc.GetOrderByIDRow) *domain.Order {
-    return &domain.Order{
-        ID:         row.ID,
-        CustomerID: row.CustomerID,
-        Status:     domain.OrderStatus(row.Status),
-        CreatedAt:  row.CreatedAt.Time,
-    }
+    return domain.ReconstructOrder(
+        row.ID,
+        row.CustomerID,
+        row.Status,
+        row.TotalCents,
+        row.CreatedAt.Time,
+    )
 }
 ```
 

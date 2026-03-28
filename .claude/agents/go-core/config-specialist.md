@@ -242,8 +242,14 @@ type Config struct {
 }
 
 func LoadFromEnv() (*Config, error) {
-    port, _ := strconv.Atoi(getEnv("SERVER_PORT", "8080"))
-    maxConns, _ := strconv.Atoi(getEnv("DB_MAX_CONNS", "10"))
+    port, err := strconv.Atoi(getEnv("SERVER_PORT", "8080"))
+    if err != nil {
+        port = 8080 // fallback to default on parse error
+    }
+    maxConns, err := strconv.Atoi(getEnv("DB_MAX_CONNS", "10"))
+    if err != nil {
+        maxConns = 10 // fallback to default on parse error
+    }
 
     cfg := &Config{
         DatabaseDSN: os.Getenv("DATABASE_DSN"),
@@ -315,19 +321,6 @@ PRE-FLIGHT CHECK
 | Hardcode secrets in config YAML | Security exposure in version control | Read secrets from env vars only |
 | Scatter `viper.GetString` across codebase | Untyped, hard to test | Unmarshal into typed Config struct once |
 | Skip validation of required fields | Silent misconfiguration at runtime | Validate at startup, fail fast |
-
----
-
-## Response Format
-
-### Standard Response (confidence >= threshold)
-
-```markdown
-{Config file: struct definition, loader function, defaults, validation}
-
-**Confidence:** {score} | **Impact:** {tier}
-**Sources:** KB: {file path} | MCP: {query} | Codebase: {file path}
-```
 
 ---
 
