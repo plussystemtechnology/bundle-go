@@ -1,0 +1,180 @@
+# NoxCare-Go Knowledge Base Domain Registry
+# 22 domains organized by category
+# Each domain has: index.md, quick-reference.md, concepts/, patterns/
+
+version: "1.0"
+updated: "2026-03-28"
+
+categories:
+  core:
+    description: Core Go language and architecture patterns
+    domains:
+      - clean-architecture
+      - go-patterns
+      - error-handling
+      - concurrency
+      - testing
+      - zap
+
+  stack:
+    description: Primary Go libraries and frameworks
+    domains:
+      - gin
+      - sqlc
+      - pgx
+      - cache
+      - kafka
+      - grpc
+      - auth
+      - swagger
+      - middleware
+
+  infra:
+    description: Infrastructure, deployment, and operations
+    domains:
+      - docker
+      - kubernetes
+      - prometheus
+      - otel
+      - migrations
+      - security
+      - ci-cd
+
+domains:
+  # ── Core (6) ──────────────────────────────────────────────────
+
+  clean-architecture:
+    path: .claude/kb/clean-architecture/
+    description: Clean Architecture layer rules, dependency inversion, import constraints
+    related_agents: [clean-arch-architect, go-developer]
+    keywords: [layers, domain, port, adapter, app, bootstrap, dependency-inversion]
+
+  go-patterns:
+    path: .claude/kb/go-patterns/
+    description: Idiomatic Go design patterns -- options, builders, factories, generics
+    related_agents: [go-developer, service-builder]
+    keywords: [functional-options, generics, interfaces, embedding, builder]
+
+  error-handling:
+    path: .claude/kb/error-handling/
+    description: Go error handling -- wrapping, sentinel errors, custom types, API errors
+    related_agents: [go-developer, handler-builder]
+    keywords: [errors, wrapping, sentinel, custom-error, validation, api-error]
+
+  concurrency:
+    path: .claude/kb/concurrency/
+    description: Goroutines, channels, context, errgroup, sync primitives
+    related_agents: [go-developer, pipeline-architect]
+    keywords: [goroutine, channel, context, errgroup, sync, worker-pool]
+
+  testing:
+    path: .claude/kb/testing/
+    description: Table-driven tests, mocking, testcontainers, benchmarks, fuzzing
+    related_agents: [test-generator, benchmark-specialist, integration-test-specialist]
+    keywords: [table-driven, mock, testcontainers, benchmark, fuzz, httptest]
+
+  zap:
+    path: .claude/kb/zap/
+    description: Structured logging with uber-go/zap -- setup, levels, middleware, sampling
+    related_agents: [logging-specialist, go-developer]
+    keywords: [logging, zap, structured, sugar, sampling, context-fields]
+
+  # ── Stack (9) ─────────────────────────────────────────────────
+
+  gin:
+    path: .claude/kb/gin/
+    description: Gin HTTP framework -- routing, binding, middleware, error handling
+    related_agents: [gin-specialist, handler-builder, middleware-builder]
+    keywords: [gin, http, routing, binding, middleware, handler, rest]
+
+  sqlc:
+    path: .claude/kb/sqlc/
+    description: sqlc code generation -- query annotations, config, batch operations
+    related_agents: [sqlc-specialist, repository-builder]
+    keywords: [sqlc, codegen, query, batch, transaction, pgx]
+
+  pgx:
+    path: .claude/kb/pgx/
+    description: pgx PostgreSQL driver -- connection pool, prepared statements, types
+    related_agents: [pgx-specialist, repository-builder]
+    keywords: [pgx, postgresql, pool, prepared-statement, copy, listen-notify]
+
+  cache:
+    path: .claude/kb/cache/
+    description: Redis caching and LRU -- data structures, strategies, distributed lock
+    related_agents: [cache-specialist]
+    keywords: [redis, lru, cache-aside, write-through, distributed-lock, rate-limit]
+
+  kafka:
+    path: .claude/kb/kafka/
+    description: Kafka with segmentio/kafka-go -- consumers, producers, exactly-once
+    related_agents: [kafka-specialist, pipeline-architect]
+    keywords: [kafka, consumer, producer, exactly-once, dlq, event-driven]
+
+  grpc:
+    path: .claude/kb/grpc/
+    description: gRPC with google.golang.org/grpc -- proto3, interceptors, streaming
+    related_agents: [grpc-specialist, api-architect]
+    keywords: [grpc, protobuf, interceptor, streaming, health-check, gateway]
+
+  auth:
+    path: .claude/kb/auth/
+    description: Authentication -- JWT, OAuth2, OIDC, RBAC, Vault, session management
+    related_agents: [auth-specialist]
+    keywords: [jwt, oauth2, oidc, rbac, vault, session, token-refresh]
+
+  swagger:
+    path: .claude/kb/swagger/
+    description: OpenAPI/Swagger with swaggo -- annotations, gin-swagger, docs generation
+    related_agents: [swagger-builder]
+    keywords: [swagger, openapi, swaggo, annotations, gin-swagger, docs]
+
+  middleware:
+    path: .claude/kb/middleware/
+    description: Gin middleware -- chain execution, auth, CORS, rate-limit, recovery
+    related_agents: [middleware-builder, gin-specialist]
+    keywords: [middleware, gin, cors, rate-limit, auth, recovery, request-id]
+
+  # ── Infra (7) ─────────────────────────────────────────────────
+
+  docker:
+    path: .claude/kb/docker/
+    description: Docker multi-stage builds, distroless images, Compose for dev
+    related_agents: [docker-specialist]
+    keywords: [docker, multi-stage, distroless, compose, health-check, build-args]
+
+  kubernetes:
+    path: .claude/kb/kubernetes/
+    description: Kubernetes deployments, services, ConfigMaps, HPA, health probes
+    related_agents: [k8s-specialist]
+    keywords: [kubernetes, deployment, service, configmap, hpa, probe, istio]
+
+  prometheus:
+    path: .claude/kb/prometheus/
+    description: Prometheus metrics -- counters, gauges, histograms, alerting, Grafana
+    related_agents: [prometheus-specialist]
+    keywords: [prometheus, metrics, counter, histogram, alerting, grafana]
+
+  otel:
+    path: .claude/kb/otel/
+    description: OpenTelemetry -- traces, spans, context propagation, collector, sampling
+    related_agents: [otel-specialist]
+    keywords: [opentelemetry, traces, spans, context-propagation, collector, sampling]
+
+  migrations:
+    path: .claude/kb/migrations/
+    description: Database migrations with golang-migrate -- versioning, idempotent DDL
+    related_agents: [migration-specialist]
+    keywords: [migration, golang-migrate, ddl, rollback, seed, init-container]
+
+  security:
+    path: .claude/kb/security/
+    description: Security scanning -- gosec, govulncheck, OWASP Top 10, input validation
+    related_agents: [security-scanner]
+    keywords: [gosec, govulncheck, owasp, validation, secrets, gitleaks]
+
+  ci-cd:
+    path: .claude/kb/ci-cd/
+    description: GitHub Actions CI, Makefile, golangci-lint config, GoReleaser, pre-commit
+    related_agents: [ci-cd-specialist]
+    keywords: [github-actions, makefile, golangci-lint, goreleaser, pre-commit]
