@@ -1,4 +1,4 @@
-# NoxCare-Go Development
+# Bundle-Go Development
 
 > Claude Code plugin for Go Backend/API development with Clean Architecture and SDD workflow
 
@@ -6,7 +6,7 @@
 
 ## Project Context
 
-**What is NoxCare-Go?** A Claude Code plugin that provides structured AI-assisted development through a 5-phase SDD workflow, specialized for Go Backend/API with Clean Architecture. It ships 43 specialized agents, 23 commands, and 22 KB domains.
+**What is Bundle-Go?** A Claude Code plugin that provides structured AI-assisted development through a 5-phase SDD workflow, specialized for Go Backend/API with Clean Architecture. It ships 43 specialized agents, 23 commands, and 22 KB domains.
 
 **Current Status:** v1.0.0 — Initial release with full Go Backend/API coverage.
 
@@ -15,7 +15,7 @@
 ## Repository Structure
 
 ```text
-noxcare-go/
+bundle-go/
 ├── .claude/
 │   ├── agents/                    # 43 specialized agents (8 categories)
 │   │   ├── workflow/              # 6 SDD phase agents
@@ -30,11 +30,12 @@ noxcare-go/
 │   │   └── README.md              # Agent routing + escalation map
 │   │
 │   ├── commands/                  # 23 slash commands
-│   │   ├── workflow/              # 7 SDD commands
-│   │   ├── go-engineering/        # 10 Go-specific commands
-│   │   ├── core/                  # 4 utility commands
-│   │   ├── knowledge/             # 1 KB command
-│   │   └── review/                # 1 review command
+│   │   └── bundle-go/            # namespaced under bundle-go
+│   │       ├── workflow/          # 7 SDD commands
+│   │       ├── go-engineering/    # 10 Go-specific commands
+│   │       ├── core/              # 4 utility commands
+│   │       ├── knowledge/         # 1 KB command
+│   │       └── review/            # 1 review command
 │   │
 │   ├── sdd/                       # SDD framework
 │   │   ├── _index.md
@@ -63,45 +64,45 @@ noxcare-go/
 
 ## Development Workflow
 
-Use NoxCare-Go's own SDD workflow to develop Go Backend/API features:
+Use Bundle-Go's own SDD workflow to develop Go Backend/API features:
 
 ```bash
 # Phase 0 — Explore an idea (optional)
-/brainstorm "Add JWT authentication middleware"
+/bundle-go:workflow:brainstorm "Add JWT authentication middleware"
 
 # Phase 1 — Capture requirements
-/define JWT_AUTH
+/bundle-go:workflow:define JWT_AUTH
 
 # Phase 2 — Design the architecture
-/design JWT_AUTH
+/bundle-go:workflow:design JWT_AUTH
 
 # Phase 3 — Build it
-/build JWT_AUTH
+/bundle-go:workflow:build JWT_AUTH
 
 # Phase 4 — Ship when complete
-/ship JWT_AUTH
+/bundle-go:workflow:ship JWT_AUTH
 
 # Cross-phase — Update any existing document
-/iterate JWT_AUTH
+/bundle-go:workflow:iterate JWT_AUTH
 ```
 
 Go engineering examples:
 
 ```bash
 # Scaffold a Gin handler
-/handler "POST /auth/login with JWT response"
+/bundle-go:go-engineering:handler "POST /auth/login with JWT response"
 
 # Generate a service layer
-/service "AuthService with login and refresh token"
+/bundle-go:go-engineering:service "AuthService with login and refresh token"
 
 # Create a sqlc repository
-/repository "UserRepository with CRUD operations"
+/bundle-go:go-engineering:repository "UserRepository with CRUD operations"
 
 # Generate a Kafka consumer
-/kafka-consumer "OrderCreatedConsumer with dead-letter queue"
+/bundle-go:go-engineering:kafka-consumer "OrderCreatedConsumer with dead-letter queue"
 
 # Add Swagger annotations
-/swagger internal/adapter/http/handler/auth.go
+/bundle-go:go-engineering:swagger internal/adapter/http/handler/auth.go
 ```
 
 ---
@@ -158,39 +159,39 @@ Go engineering examples:
 
 | Command | Purpose |
 |---------|---------|
-| `/brainstorm` | Explore ideas (Phase 0) |
-| `/define` | Capture requirements (Phase 1) |
-| `/design` | Create architecture (Phase 2) |
-| `/build` | Execute implementation (Phase 3) |
-| `/ship` | Archive completed work (Phase 4) |
-| `/iterate` | Update existing docs (Cross-phase) |
-| `/create-pr` | Create pull request |
+| `/bundle-go:workflow:brainstorm` | Explore ideas (Phase 0) |
+| `/bundle-go:workflow:define` | Capture requirements (Phase 1) |
+| `/bundle-go:workflow:design` | Create architecture (Phase 2) |
+| `/bundle-go:workflow:build` | Execute implementation (Phase 3) |
+| `/bundle-go:workflow:ship` | Archive completed work (Phase 4) |
+| `/bundle-go:workflow:iterate` | Update existing docs (Cross-phase) |
+| `/bundle-go:workflow:create-pr` | Create pull request |
 
 ### Go Engineering (10)
 
 | Command | Purpose |
 |---------|---------|
-| `/handler` | Gin HTTP handler scaffolding |
-| `/service` | Application service layer |
-| `/repository` | sqlc/pgx repository scaffolding |
-| `/migration` | SQL migration files (golang-migrate) |
-| `/middleware` | Gin middleware (auth, logging, rate-limit) |
-| `/proto` | Protobuf + gRPC service definition |
-| `/kafka-consumer` | Kafka consumer with error handling |
-| `/swagger` | Swagger/OpenAPI annotations |
-| `/security-scan` | Security audit (OWASP, secrets) |
-| `/go-review` | Go-specific code review |
+| `/bundle-go:go-engineering:handler` | Gin HTTP handler scaffolding |
+| `/bundle-go:go-engineering:service` | Application service layer |
+| `/bundle-go:go-engineering:repository` | sqlc/pgx repository scaffolding |
+| `/bundle-go:go-engineering:migration` | SQL migration files (golang-migrate) |
+| `/bundle-go:go-engineering:middleware` | Gin middleware (auth, logging, rate-limit) |
+| `/bundle-go:go-engineering:proto` | Protobuf + gRPC service definition |
+| `/bundle-go:go-engineering:kafka-consumer` | Kafka consumer with error handling |
+| `/bundle-go:go-engineering:swagger` | Swagger/OpenAPI annotations |
+| `/bundle-go:go-engineering:security-scan` | Security audit (OWASP, secrets) |
+| `/bundle-go:go-engineering:go-review` | Go-specific code review |
 
 ### Core & Utilities (6)
 
 | Command | Purpose |
 |---------|---------|
-| `/create-kb` | Create KB domain |
-| `/review` | General code review |
-| `/meeting` | Meeting transcript analysis |
-| `/memory` | Save session insights |
-| `/sync-context` | Update CLAUDE.md |
-| `/readme-maker` | Generate README |
+| `/bundle-go:knowledge:create-kb` | Create KB domain |
+| `/bundle-go:review:review` | General code review |
+| `/bundle-go:core:meeting` | Meeting transcript analysis |
+| `/bundle-go:core:memory` | Save session insights |
+| `/bundle-go:core:sync-context` | Update CLAUDE.md |
+| `/bundle-go:core:readme-maker` | Generate README |
 
 ---
 
