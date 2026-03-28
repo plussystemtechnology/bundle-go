@@ -210,12 +210,23 @@ func RedisCheck(client *redis.Client) func(context.Context) error {
     }
 }
 
-// Kafka check — verify connection to at least one broker.
+// KafkaCheck verifies connection to at least one broker.
+// checkKafkaBrokers verifies broker reachability.
+// Implementation depends on Kafka client (github.com/segmentio/kafka-go
+// or github.com/IBM/sarama). Example with kafka-go:
 func KafkaCheck(brokers []string) func(context.Context) error {
     return func(ctx context.Context) error {
-        // Lightweight broker connectivity check (no consumer group needed)
-        // Use a short dial with context deadline inherited from caller
-        return checkKafkaBrokers(ctx, brokers)
+        // Lightweight metadata request to verify broker reachability
+        conn, err := kafka.DialContext(ctx, "tcp", brokers[0])
+        if err != nil {
+            return fmt.Errorf("kafka dial: %w", err)
+        }
+        defer conn.Close()
+        _, err = conn.Brokers()
+        if err != nil {
+            return fmt.Errorf("kafka brokers: %w", err)
+        }
+        return nil
     }
 }
 ```

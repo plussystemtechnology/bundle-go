@@ -179,6 +179,8 @@ import (
     "go.opentelemetry.io/otel/propagation"
     "go.opentelemetry.io/otel/sdk/resource"
     sdktrace "go.opentelemetry.io/otel/sdk/trace"
+    // Pin to v1.21.0 — convenience helpers (HTTPMethod, HTTPRoute, etc.)
+    // removed in v1.26.0; update to attribute.String() form when upgrading
     semconv "go.opentelemetry.io/otel/semconv/v1.21.0"
 )
 
@@ -256,7 +258,7 @@ import (
 const tracerName = "github.com/acme/app/http"
 
 func OTelTracing(serviceName string) gin.HandlerFunc {
-    tracer := otel.Tracer(tracerName)
+    tracer := otel.Tracer(serviceName)
     propagator := otel.GetTextMapPropagator()
 
     return func(c *gin.Context) {
@@ -324,8 +326,9 @@ func NewGRPCServer() *grpc.Server {
 
 // For gRPC clients:
 func NewGRPCClientConn(target string) (*grpc.ClientConn, error) {
-    return grpc.Dial(target,
+    return grpc.NewClient(target,
         grpc.WithStatsHandler(otelgrpc.NewClientHandler()),
+        grpc.WithTransportCredentials(insecure.NewCredentials()), // use TLS in production
     )
 }
 ```
