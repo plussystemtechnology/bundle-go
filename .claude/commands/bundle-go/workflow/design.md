@@ -25,7 +25,7 @@ description: Create architecture and technical specification (Phase 2)
 
 ## Overview
 
-This is **Phase 2** of the 5-phase NoxCare-Go workflow:
+This is **Phase 2** of the 5-phase Bundle-Go workflow:
 
 ```text
 Phase 0: /brainstorm → .claude/sdd/features/BRAINSTORM_{FEATURE}.md (optional)

@@ -24,7 +24,7 @@ description: Archive completed feature with lessons learned (Phase 4)
 
 ## Overview
 
-This is **Phase 4** of the 5-phase NoxCare-Go workflow:
+This is **Phase 4** of the 5-phase Bundle-Go workflow:
 
 ```text
 Phase 0: /brainstorm → .claude/sdd/features/BRAINSTORM_{FEATURE}.md (optional)

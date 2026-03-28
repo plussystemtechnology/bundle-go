@@ -28,7 +28,7 @@ description: Capture and validate requirements in one pass (Phase 1)
 
 ## Overview
 
-This is **Phase 1** of the 5-phase NoxCare-Go workflow:
+This is **Phase 1** of the 5-phase Bundle-Go workflow:
 
 ```text
 Phase 0: /brainstorm → .claude/sdd/features/BRAINSTORM_{FEATURE}.md (optional)

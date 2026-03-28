@@ -24,7 +24,7 @@ description: Execute implementation with agent delegation and Go verification (P
 
 ## Overview
 
-This is **Phase 3** of the 5-phase NoxCare-Go workflow:
+This is **Phase 3** of the 5-phase Bundle-Go workflow:
 
 ```text
 Phase 0: /brainstorm → .claude/sdd/features/BRAINSTORM_{FEATURE}.md (optional)

@@ -32,7 +32,7 @@ description: Explore ideas through collaborative dialogue before requirements ca
 
 ## Overview
 
-This is **Phase 0** of the 5-phase NoxCare-Go workflow:
+This is **Phase 0** of the 5-phase Bundle-Go workflow:
 
 ```text
 Phase 0: /brainstorm → .claude/sdd/features/BRAINSTORM_{FEATURE}.md (THIS COMMAND)
