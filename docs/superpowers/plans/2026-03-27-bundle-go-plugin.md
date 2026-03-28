@@ -1,4 +1,4 @@
-# NoxCare-Go Plugin Implementation Plan
+# Bundle-Go Plugin Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -8,7 +8,7 @@
 
 **Tech Stack:** Claude Code plugin system (markdown agents, commands, KB domains), YAML contracts, JSON settings.
 
-**Spec:** `docs/superpowers/specs/2026-03-27-noxcare-go-plugin-design.md`
+**Spec:** `docs/superpowers/specs/2026-03-27-bundle-go-plugin-design.md`
 
 **Reference implementation:** `/home/lerry/models/agentspec/` (original AgentSpec plugin to port from)
 
@@ -41,7 +41,7 @@ Write `.claude/settings.json` with permissions config from spec Section 13.
 
 ```bash
 git add .claude/
-git commit -m "feat: scaffold noxcare-go plugin directory structure"
+git commit -m "feat: scaffold bundle-go plugin directory structure"
 ```
 
 ---
@@ -91,7 +91,7 @@ git commit -m "feat: add Go-adapted agent template and routing README"
 - [ ] **Step 1: Create CLAUDE.md**
 
 Write the project context file with:
-- Project Context: NoxCare-Go description, version 1.0.0
+- Project Context: Bundle-Go description, version 1.0.0
 - Repository Structure: full tree from spec Section 2
 - Development Workflow: SDD examples with Go commands
 - Coding Standards: Go-specific (gofmt, golangci-lint, go vet, Clean Arch rules)
@@ -325,7 +325,7 @@ Each KB domain MUST have:
 
 Files: index.md, quick-reference.md, concepts/{layer-rules.md, dependency-inversion.md, interface-segregation.md, single-responsibility.md}, patterns/{port-adapter.md, dependency-injection.md, repository-pattern.md, service-pattern.md}
 
-Content focus: NoxCare-Go layer rules from spec Section 8, import rules from Section 8.3, Go-specific DIP with interfaces. All code examples in Go.
+Content focus: Bundle-Go layer rules from spec Section 8, import rules from Section 8.3, Go-specific DIP with interfaces. All code examples in Go.
 
 - [ ] **Step 2: Create `go-patterns/` KB domain**
 
@@ -897,7 +897,7 @@ git commit -m "feat: add 10 Go engineering commands"
 - [ ] **Step 1: Port all 6 core commands**
 
 These are largely language-agnostic. Port from agentspec with minimal changes:
-- `sync-context.md`: Update to reference Go project structure and NoxCare-Go CLAUDE.md
+- `sync-context.md`: Update to reference Go project structure and Bundle-Go CLAUDE.md
 - `review.md`: Change lint/test references to Go tooling
 - Others: port directly
 
@@ -929,7 +929,7 @@ git commit -m "feat: add 6 core/utility commands and commands README"
 - [ ] **Step 1: Create README.md**
 
 Write project README with:
-- Banner/title: NoxCare-Go
+- Banner/title: Bundle-Go
 - Description: Claude Code plugin for Go Backend/API with Clean Architecture
 - Key numbers (43 agents, 22 KB, 23 commands)
 - Quick start (installation + first command examples)

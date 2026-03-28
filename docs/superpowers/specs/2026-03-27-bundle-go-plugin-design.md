@@ -1,16 +1,16 @@
-# NoxCare-Go Plugin Design Spec
+# Bundle-Go Plugin Design Spec
 
 > Claude Code plugin for Go Backend/API development with Clean Architecture, SDD workflow, and 43 specialized agents.
 
 **Date:** 2026-03-27
 **Status:** Draft
-**Module:** `github.com/noxcare/noxcare-go` (plugin canonical name; target project uses `github.com/plussystemtechnology/is-person`)
+**Module:** `github.com/noxcare/bundle-go` (plugin canonical name; target project uses `github.com/plussystemtechnology/is-person`)
 
 ---
 
 ## 1. Overview
 
-NoxCare-Go is a plug-and-play Claude Code plugin for Go Backend/API development. It ports the AgentSpec architecture (5-phase SDD workflow, agent tiers, KB-First resolution, confidence scoring) and replaces the data engineering domain with Go backend/API patterns following Clean Architecture and SOLID principles.
+Bundle-Go is a plug-and-play Claude Code plugin for Go Backend/API development. It ports the AgentSpec architecture (5-phase SDD workflow, agent tiers, KB-First resolution, confidence scoring) and replaces the data engineering domain with Go backend/API patterns following Clean Architecture and SOLID principles.
 
 ### Stack
 
@@ -47,7 +47,7 @@ NoxCare-Go is a plug-and-play Claude Code plugin for Go Backend/API development.
 ## 2. Directory Structure
 
 ```text
-noxcare-go/
+bundle-go/
 ├── .claude/
 │   ├── agents/                    # 43 specialized agents
 │   │   ├── workflow/              # 6 SDD phase agents
