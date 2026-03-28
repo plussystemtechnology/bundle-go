@@ -41,7 +41,7 @@ func NewPostgres(t *testing.T, initScripts ...string) *PostgresContainer {
     ctx := context.Background()
 
     opts := []testcontainers.ContainerCustomizer{
-        tcpostgres.WithDatabase("noxcare_test"),
+        tcpostgres.WithDatabase("bundle_go_test"),
         tcpostgres.WithUsername("postgres"),
         tcpostgres.WithPassword("postgres"),
         testcontainers.WithWaitStrategy(

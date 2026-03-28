@@ -27,10 +27,10 @@ import (
     "fmt"
 
     "go.uber.org/zap"
-    "github.com/org/noxcare-go/app/dto"
-    "github.com/org/noxcare-go/config"
-    "github.com/org/noxcare-go/domain/patient"
-    "github.com/org/noxcare-go/port"
+    "github.com/org/bundle-go/app/dto"
+    "github.com/org/bundle-go/config"
+    "github.com/org/bundle-go/domain/patient"
+    "github.com/org/bundle-go/port"
 )
 
 type PatientService struct {
@@ -186,9 +186,9 @@ import (
     "testing"
 
     "github.com/stretchr/testify/assert"
-    "github.com/org/noxcare-go/app/dto"
-    "github.com/org/noxcare-go/app/service"
-    "github.com/org/noxcare-go/domain/patient"
+    "github.com/org/bundle-go/app/dto"
+    "github.com/org/bundle-go/app/service"
+    "github.com/org/bundle-go/domain/patient"
 )
 
 func TestPatientService_CreatePatient(t *testing.T) {

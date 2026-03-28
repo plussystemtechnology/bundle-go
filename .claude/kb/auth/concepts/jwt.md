@@ -14,7 +14,7 @@ type Claims struct {
 func (s *AuthService) CreateToken(user domain.User) (string, error) {
     claims := Claims{
         RegisteredClaims: jwt.RegisteredClaims{
-            Issuer:    "noxcare-api",
+            Issuer:    "bundle-go-api",
             Subject:   user.ID.String(),
             ExpiresAt: jwt.NewNumericDate(time.Now().Add(1 * time.Hour)),
             IssuedAt:  jwt.NewNumericDate(time.Now()),

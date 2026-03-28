@@ -51,7 +51,7 @@ import "gopkg.in/natefinsh/lumberjack.v2"
 
 func NewWithRotation(cfg *config.LogConfig) (*zap.Logger, error) {
     rotatingFile := zapcore.AddSync(&lumberjack.Logger{
-        Filename:   cfg.FilePath,   // e.g. "/var/log/noxcare/app.log"
+        Filename:   cfg.FilePath,   // e.g. "/var/log/bundle-go/app.log"
         MaxSize:    100,            // MB before rotation
         MaxBackups: 5,              // number of old files to retain
         MaxAge:     30,             // days before deletion

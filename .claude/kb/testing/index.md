@@ -1,4 +1,4 @@
-# Testing — NoxCare-Go
+# Testing — Bundle-Go
 
 ## Test Strategy
 

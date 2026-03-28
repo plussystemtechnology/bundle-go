@@ -2,7 +2,7 @@
 
 ## Philosophy
 
-NoxCare-Go uses **manual constructor injection** — no wire, no dig, no fx.
+Bundle-Go uses **manual constructor injection** — no wire, no dig, no fx.
 Dependencies are passed explicitly via constructors. The `bootstrap/` package
 owns all wiring. This is idiomatic Go: explicit over magic.
 
@@ -165,8 +165,8 @@ import (
     "syscall"
     "time"
 
-    "github.com/org/noxcare-go/bootstrap"
-    "github.com/org/noxcare-go/config"
+    "github.com/org/bundle-go/bootstrap"
+    "github.com/org/bundle-go/config"
 )
 
 func main() {

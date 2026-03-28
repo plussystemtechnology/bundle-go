@@ -54,7 +54,7 @@ import (
     "context"
 
     "go.uber.org/zap"
-    "github.com/org/noxcare-go/pkg/ctxkey"
+    "github.com/org/bundle-go/pkg/ctxkey"
 )
 
 // FromContext returns a child logger with trace/request/user fields

@@ -14,7 +14,7 @@ package patient_test
 
 import (
     "testing"
-    "github.com/org/noxcare-go/domain/patient"
+    "github.com/org/bundle-go/domain/patient"
 )
 
 func BenchmarkValidateCPF(b *testing.B) {

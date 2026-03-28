@@ -56,7 +56,7 @@ import (
     "strings"
     "time"
     "unicode/utf8"
-    "github.com/org/noxcare-go/pkg/apierror"
+    "github.com/org/bundle-go/pkg/apierror"
 )
 
 var cpfRe = regexp.MustCompile(`^\d{3}\.\d{3}\.\d{3}-\d{2}$`)

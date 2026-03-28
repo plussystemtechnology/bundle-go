@@ -48,7 +48,7 @@ package port
 
 import (
     "context"
-    "github.com/org/noxcare-go/domain/patient"
+    "github.com/org/bundle-go/domain/patient"
 )
 
 type PatientRepository interface {
@@ -71,9 +71,9 @@ package service
 
 import (
     "context"
-    "github.com/org/noxcare-go/config"
-    "github.com/org/noxcare-go/domain/patient"
-    "github.com/org/noxcare-go/port"
+    "github.com/org/bundle-go/config"
+    "github.com/org/bundle-go/domain/patient"
+    "github.com/org/bundle-go/port"
 )
 
 type PatientService struct {
@@ -100,8 +100,8 @@ package handler
 import (
     "net/http"
     "github.com/gin-gonic/gin"
-    "github.com/org/noxcare-go/app/service"
-    "github.com/org/noxcare-go/pkg/httputil"
+    "github.com/org/bundle-go/app/service"
+    "github.com/org/bundle-go/pkg/httputil"
 )
 
 type PatientHandler struct {
@@ -120,9 +120,9 @@ type PatientHandler struct {
 package bootstrap
 
 import (
-    "github.com/org/noxcare-go/adapter/db/repo"
-    "github.com/org/noxcare-go/app/service"
-    "github.com/org/noxcare-go/config"
+    "github.com/org/bundle-go/adapter/db/repo"
+    "github.com/org/bundle-go/app/service"
+    "github.com/org/bundle-go/config"
 )
 
 func NewPatientService(db *pgxpool.Pool, cfg *config.AppConfig) *service.PatientService {
@@ -142,7 +142,7 @@ func NewPatientService(db *pgxpool.Pool, cfg *config.AppConfig) *service.Patient
 package main
 
 import (
-    "github.com/org/noxcare-go/bootstrap"
+    "github.com/org/bundle-go/bootstrap"
 )
 
 func main() {

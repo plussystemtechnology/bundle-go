@@ -22,7 +22,7 @@ package fixtures
 
 import (
     "time"
-    "github.com/org/noxcare-go/domain/patient"
+    "github.com/org/bundle-go/domain/patient"
 )
 
 type PatientBuilder struct {
@@ -100,7 +100,7 @@ package testutil
 
 import (
     "time"
-    "github.com/org/noxcare-go/config"
+    "github.com/org/bundle-go/config"
 )
 
 func TestConfig() *config.AppConfig {

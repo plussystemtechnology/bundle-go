@@ -59,7 +59,7 @@ io.ErrClosedPipe
 // Package sql
 sql.ErrNoRows
 
-// pgx (used in NoxCare-Go)
+// pgx (used in Bundle-Go)
 pgx.ErrNoRows
 pgx.ErrTxClosed
 

@@ -1,4 +1,4 @@
-# Clean Architecture — NoxCare-Go
+# Clean Architecture — Bundle-Go
 
 ## Layer Stack (inner → outer)
 

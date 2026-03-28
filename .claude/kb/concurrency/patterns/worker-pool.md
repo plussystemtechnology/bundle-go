@@ -93,7 +93,7 @@ import (
 
     "github.com/twmb/franz-go/pkg/kgo"
     "go.uber.org/zap"
-    "github.com/org/noxcare-go/app/service"
+    "github.com/org/bundle-go/app/service"
 )
 
 const defaultWorkers = 10

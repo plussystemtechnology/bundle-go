@@ -1,4 +1,4 @@
-# Error Handling — NoxCare-Go
+# Error Handling — Bundle-Go
 
 ## Philosophy
 
@@ -32,7 +32,7 @@ errors.New("something went wrong")  // simple
 fmt.Errorf("with %s format: %w", "context", err)  // wrapped
 ```
 
-## Error Types Used in NoxCare-Go
+## Error Types Used in Bundle-Go
 
 | Type              | Purpose                                  | Where defined    |
 |-------------------|------------------------------------------|------------------|

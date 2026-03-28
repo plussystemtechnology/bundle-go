@@ -27,7 +27,7 @@ func TestMain(m *testing.M) {
     ctx := context.Background()
 
     c, err := tcpostgres.Run(ctx, "postgres:16-alpine",
-        tcpostgres.WithDatabase("noxcare_test"),
+        tcpostgres.WithDatabase("bundle_go_test"),
         tcpostgres.WithUsername("postgres"),
         tcpostgres.WithPassword("postgres"),
         tcpostgres.WithInitScripts("../../../migrations/schema.sql"),
@@ -67,8 +67,8 @@ import (
     "github.com/stretchr/testify/assert"
     "github.com/stretchr/testify/require"
     "go.uber.org/zap"
-    "github.com/org/noxcare-go/adapter/db/repo"
-    "github.com/org/noxcare-go/domain/patient"
+    "github.com/org/bundle-go/adapter/db/repo"
+    "github.com/org/bundle-go/domain/patient"
 )
 
 func truncatePatients(t *testing.T) {

@@ -1,4 +1,4 @@
-# Go Patterns — NoxCare-Go
+# Go Patterns — Bundle-Go
 
 ## Core Philosophy
 
@@ -33,7 +33,7 @@
 5. **Prefer explicit over implicit** — no magic, no globals, no `init()` side effects
 6. **Goroutines are cheap, leaks are not** — always have a shutdown path
 
-## NoxCare-Go Conventions
+## Bundle-Go Conventions
 
 - Config structs use functional options (`adapter/http/server.go`)
 - All repositories return domain types, never DB-generated types

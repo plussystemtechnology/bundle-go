@@ -35,8 +35,8 @@ import (
     "time"
 
     "go.uber.org/zap"
-    "github.com/org/noxcare-go/domain/patient"
-    "github.com/org/noxcare-go/port"
+    "github.com/org/bundle-go/domain/patient"
+    "github.com/org/bundle-go/port"
 )
 
 type ImportRecord struct {

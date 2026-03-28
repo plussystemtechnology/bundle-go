@@ -2,7 +2,7 @@
 
 ## Philosophy
 
-In NoxCare-Go, mocks are **hand-written** by default (no magic, no generated code unless
+In Bundle-Go, mocks are **hand-written** by default (no magic, no generated code unless
 the interface is large or changes frequently). Use `mockery` for large, stable interfaces.
 
 ## Hand-Written Mock (recommended for small interfaces)
@@ -105,7 +105,7 @@ mockery --name=PatientRepository --dir=port --output=mocks --outpkg=mocks
 Generated mock usage:
 
 ```go
-import "github.com/org/noxcare-go/mocks"
+import "github.com/org/bundle-go/mocks"
 
 func TestGetPatient(t *testing.T) {
     repo := mocks.NewPatientRepository(t)

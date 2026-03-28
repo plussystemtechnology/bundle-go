@@ -15,8 +15,8 @@ import (
     "fmt"
     "time"
 
-    "github.com/org/noxcare-go/config"
-    "github.com/org/noxcare-go/port"
+    "github.com/org/bundle-go/config"
+    "github.com/org/bundle-go/port"
 )
 
 type Provider string
@@ -143,7 +143,7 @@ import (
     "fmt"
 
     "github.com/jackc/pgx/v5/pgxpool"
-    "github.com/org/noxcare-go/config"
+    "github.com/org/bundle-go/config"
 )
 
 type DBDriver string

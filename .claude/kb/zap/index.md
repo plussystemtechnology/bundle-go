@@ -1,4 +1,4 @@
-# Zap Logging — NoxCare-Go
+# Zap Logging — Bundle-Go
 
 ## Why Zap?
 

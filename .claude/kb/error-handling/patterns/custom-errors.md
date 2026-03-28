@@ -161,9 +161,9 @@ import (
 
     "github.com/gin-gonic/gin"
     "go.uber.org/zap"
-    "github.com/org/noxcare-go/domain/appointment"
-    "github.com/org/noxcare-go/domain/patient"
-    "github.com/org/noxcare-go/pkg/apierror"
+    "github.com/org/bundle-go/domain/appointment"
+    "github.com/org/bundle-go/domain/patient"
+    "github.com/org/bundle-go/pkg/apierror"
 )
 
 func ErrorHandler(logger *zap.Logger) gin.HandlerFunc {

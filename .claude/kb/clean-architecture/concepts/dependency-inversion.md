@@ -25,7 +25,7 @@ package port
 
 import (
     "context"
-    "github.com/org/noxcare-go/domain/patient"
+    "github.com/org/bundle-go/domain/patient"
 )
 
 type PatientRepository interface {
@@ -43,8 +43,8 @@ package service
 
 import (
     "context"
-    "github.com/org/noxcare-go/domain/patient"
-    "github.com/org/noxcare-go/port"
+    "github.com/org/bundle-go/domain/patient"
+    "github.com/org/bundle-go/port"
 )
 
 type PatientService struct {
@@ -73,7 +73,7 @@ package repo
 import (
     "context"
     "github.com/jackc/pgx/v5/pgxpool"
-    "github.com/org/noxcare-go/domain/patient"
+    "github.com/org/bundle-go/domain/patient"
 )
 
 type PatientRepo struct {

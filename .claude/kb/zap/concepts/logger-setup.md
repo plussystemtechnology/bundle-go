@@ -11,7 +11,7 @@ import (
 
     "go.uber.org/zap"
     "go.uber.org/zap/zapcore"
-    "github.com/org/noxcare-go/config"
+    "github.com/org/bundle-go/config"
 )
 
 func NewProduction(cfg *config.LogConfig) (*zap.Logger, error) {
@@ -49,14 +49,14 @@ Config struct:
 // config/config.go
 type LogConfig struct {
     Level       string `env:"LOG_LEVEL"       envDefault:"info"`
-    ServiceName string `env:"SERVICE_NAME"    envDefault:"noxcare-go"`
+    ServiceName string `env:"SERVICE_NAME"    envDefault:"bundle-go"`
     Environment string `env:"ENVIRONMENT"     envDefault:"production"`
 }
 ```
 
 Sample JSON output:
 ```json
-{"ts":"2026-03-27T10:00:00.000Z","level":"info","service":"noxcare-go","env":"production","msg":"patient created","patient_id":"p-123","elapsed":"12ms"}
+{"ts":"2026-03-27T10:00:00.000Z","level":"info","service":"bundle-go","env":"production","msg":"patient created","patient_id":"p-123","elapsed":"12ms"}
 ```
 
 ## Development Logger (Human-Readable)

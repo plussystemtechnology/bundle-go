@@ -112,7 +112,7 @@ componentLog.Info("patient created", zap.String("id", p.ID))
 handlerLog := logger.Named("patient_handler")
 ```
 
-## Best Practice in NoxCare-Go
+## Best Practice in Bundle-Go
 
 ```go
 // All structs use *zap.Logger (structured)

@@ -39,7 +39,7 @@ swag fmt
 ## Main File Annotations
 
 ```go
-// @title NoxCare API
+// @title BundleGo API
 // @version 1.0
 // @description Go Backend API with Clean Architecture
 // @host localhost:8080

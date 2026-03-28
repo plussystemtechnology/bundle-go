@@ -105,7 +105,7 @@ package middleware
 import (
     "github.com/gin-gonic/gin"
     "github.com/google/uuid"
-    "github.com/org/noxcare-go/pkg/ctxkey"
+    "github.com/org/bundle-go/pkg/ctxkey"
     "go.uber.org/zap"
 )
 
@@ -164,7 +164,7 @@ package router
 import (
     "github.com/gin-gonic/gin"
     "go.uber.org/zap"
-    "github.com/org/noxcare-go/adapter/http/middleware"
+    "github.com/org/bundle-go/adapter/http/middleware"
 )
 
 func New(logger *zap.Logger) *gin.Engine {
@@ -183,15 +183,15 @@ func New(logger *zap.Logger) *gin.Engine {
 ## Sample Log Output
 
 ```json
-{"ts":"2026-03-27T10:00:01.234Z","level":"info","service":"noxcare-go","msg":"request",
+{"ts":"2026-03-27T10:00:01.234Z","level":"info","service":"bundle-go","msg":"request",
  "status":200,"method":"GET","path":"/api/v1/patients/p-123","ip":"10.0.0.1",
  "latency":"12.5ms","request_id":"req-abc123"}
 
-{"ts":"2026-03-27T10:00:02.000Z","level":"warn","service":"noxcare-go","msg":"request",
+{"ts":"2026-03-27T10:00:02.000Z","level":"warn","service":"bundle-go","msg":"request",
  "status":404,"method":"GET","path":"/api/v1/patients/p-999","ip":"10.0.0.2",
  "latency":"3.2ms","request_id":"req-def456"}
 
-{"ts":"2026-03-27T10:00:03.000Z","level":"error","service":"noxcare-go","msg":"request",
+{"ts":"2026-03-27T10:00:03.000Z","level":"error","service":"bundle-go","msg":"request",
  "status":500,"method":"POST","path":"/api/v1/appointments","ip":"10.0.0.3",
  "latency":"201ms","request_id":"req-ghi789"}
 ```

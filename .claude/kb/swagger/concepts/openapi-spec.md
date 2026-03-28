@@ -5,7 +5,7 @@
 ```yaml
 openapi: "3.0.0"
 info:
-  title: NoxCare API
+  title: BundleGo API
   version: "1.0"
 paths:
   /users:

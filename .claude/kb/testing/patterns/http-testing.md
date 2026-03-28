@@ -22,8 +22,8 @@ import (
     "github.com/stretchr/testify/assert"
     "github.com/stretchr/testify/require"
     "go.uber.org/zap"
-    "github.com/org/noxcare-go/adapter/http/handler"
-    "github.com/org/noxcare-go/domain/patient"
+    "github.com/org/bundle-go/adapter/http/handler"
+    "github.com/org/bundle-go/domain/patient"
 )
 
 func init() {

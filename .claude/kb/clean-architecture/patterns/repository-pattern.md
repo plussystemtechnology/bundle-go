@@ -15,7 +15,7 @@ package port
 import (
     "context"
     "time"
-    "github.com/org/noxcare-go/domain/appointment"
+    "github.com/org/bundle-go/domain/appointment"
 )
 
 type AppointmentRepository interface {
@@ -43,9 +43,9 @@ import (
     "github.com/jackc/pgx/v5"
     "github.com/jackc/pgx/v5/pgxpool"
     "go.uber.org/zap"
-    "github.com/org/noxcare-go/adapter/db/sqlc"
-    "github.com/org/noxcare-go/domain/appointment"
-    "github.com/org/noxcare-go/port"
+    "github.com/org/bundle-go/adapter/db/sqlc"
+    "github.com/org/bundle-go/domain/appointment"
+    "github.com/org/bundle-go/port"
 )
 
 // Compile-time check

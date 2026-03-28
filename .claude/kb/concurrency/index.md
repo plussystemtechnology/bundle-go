@@ -1,4 +1,4 @@
-# Concurrency — NoxCare-Go
+# Concurrency — Bundle-Go
 
 ## Philosophy
 
@@ -20,7 +20,7 @@
 | `errgroup.Group`   | Fan-out + collect first error                     |
 | `atomic`           | Lock-free counters and flags                      |
 
-## NoxCare-Go Concurrency Patterns
+## Bundle-Go Concurrency Patterns
 
 | Scenario                            | Pattern                |
 |-------------------------------------|------------------------|

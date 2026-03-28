@@ -46,7 +46,7 @@ package port
 
 import (
     "context"
-    "github.com/org/noxcare-go/domain/patient"
+    "github.com/org/bundle-go/domain/patient"
 )
 
 type PatientRepository interface {
@@ -72,9 +72,9 @@ import (
 
     "github.com/jackc/pgx/v5"
     "github.com/jackc/pgx/v5/pgxpool"
-    "github.com/org/noxcare-go/adapter/db/sqlc" // generated queries
-    "github.com/org/noxcare-go/domain/patient"
-    "github.com/org/noxcare-go/port"
+    "github.com/org/bundle-go/adapter/db/sqlc" // generated queries
+    "github.com/org/bundle-go/domain/patient"
+    "github.com/org/bundle-go/port"
 )
 
 // Compile-time interface check
@@ -140,8 +140,8 @@ import (
     "fmt"
 
     "github.com/twmb/franz-go/pkg/kgo"
-    "github.com/org/noxcare-go/domain/patient"
-    "github.com/org/noxcare-go/port"
+    "github.com/org/bundle-go/domain/patient"
+    "github.com/org/bundle-go/port"
 )
 
 var _ port.PatientEventPublisher = (*PatientKafkaPublisher)(nil)
@@ -181,10 +181,10 @@ package bootstrap
 import (
     "github.com/jackc/pgx/v5/pgxpool"
     "github.com/twmb/franz-go/pkg/kgo"
-    "github.com/org/noxcare-go/adapter/db/repo"
-    "github.com/org/noxcare-go/adapter/kafka/publisher"
-    "github.com/org/noxcare-go/app/service"
-    "github.com/org/noxcare-go/config"
+    "github.com/org/bundle-go/adapter/db/repo"
+    "github.com/org/bundle-go/adapter/kafka/publisher"
+    "github.com/org/bundle-go/app/service"
+    "github.com/org/bundle-go/config"
 )
 
 func NewPatientService(db *pgxpool.Pool, kc *kgo.Client, cfg *config.AppConfig) *service.PatientService {

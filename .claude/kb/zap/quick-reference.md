@@ -130,7 +130,7 @@ router.Use(middleware.ZapRecovery(logger))
 ```go
 import "go.opentelemetry.io/contrib/bridges/otelzap"
 
-core := otelzap.NewCore("noxcare-go",
+core := otelzap.NewCore("bundle-go",
     otelzap.WithLoggerProvider(otel.GetLoggerProvider()),
 )
 logger = zap.New(zapcore.NewTee(prodCore, core))
