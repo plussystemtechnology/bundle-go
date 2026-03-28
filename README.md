@@ -107,20 +107,20 @@ cp -r noxcare-go/.claude your-go-project/.claude
 | Category | Count | Agents |
 |----------|-------|--------|
 | Workflow | 6 | brainstorm, define, design, build, ship, iterate |
-| Architect | 6 | system-architect, api-designer, db-architect, event-architect, security-architect, performance-architect |
-| Go Core | 6 | domain-builder, port-builder, app-builder, handler-builder, repository-builder, service-builder |
-| API | 6 | rest-specialist, grpc-specialist, swagger-builder, middleware-builder, auth-specialist, api-versioning |
-| Data | 6 | sqlc-specialist, pgx-specialist, migration-specialist, redis-specialist, kafka-specialist, event-sourcing |
-| Cloud | 4 | docker-specialist, kubernetes-specialist, aws-specialist, ci-cd-specialist |
-| Observability | 4 | prometheus-specialist, otel-specialist, logging-specialist, health-specialist |
+| Architect | 6 | api-architect, clean-arch-architect, pipeline-architect, platform-engineer, schema-designer, the-planner |
+| Go Core | 6 | config-specialist, go-developer, handler-builder, middleware-builder, repository-builder, service-builder |
+| API | 6 | api-gateway-specialist, auth-specialist, gin-specialist, grpc-specialist, rest-designer, swagger-builder |
+| Data | 6 | cache-specialist, event-store-specialist, kafka-specialist, migration-specialist, pgx-specialist, sqlc-specialist |
+| Cloud | 4 | aws-deployer, ci-cd-specialist, docker-specialist, k8s-specialist |
+| Observability | 4 | health-check-specialist, logging-specialist, otel-specialist, prometheus-specialist |
 | Test | 5 | test-generator, integration-test-specialist, benchmark-specialist, security-scanner, code-reviewer |
 
 ### 22 KB Domains
 
 | Category | Domains |
 |----------|---------|
-| Core Go (6) | clean-architecture, go-patterns, concurrency, error-handling, middleware, testing |
-| Stack (9) | gin, sqlc, pgx, kafka, grpc, swagger, zap, auth, migrations |
+| Core Go (6) | clean-architecture, go-patterns, concurrency, error-handling, testing, zap |
+| Stack (9) | gin, sqlc, pgx, kafka, grpc, swagger, auth, middleware, migrations |
 | Infra (7) | docker, kubernetes, ci-cd, prometheus, otel, security, cache |
 
 ### 23 Slash Commands

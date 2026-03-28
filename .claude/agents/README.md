@@ -152,8 +152,8 @@ Drive the SDD workflow phases from brainstorm to ship.
 | `brainstorm-agent` | T2 | sonnet | 0 | Explore ideas through collaborative dialogue |
 | `define-agent` | T2 | sonnet | 1 | Capture requirements with clarity scoring |
 | `design-agent` | T2 | opus | 2 | Create technical architecture with file manifest |
-| `build-agent` | T2 | opus | 3 | Execute implementation with agent delegation |
-| `ship-agent` | T2 | sonnet | 4 | Archive with lessons learned |
+| `build-agent` | T2 | sonnet | 3 | Execute implementation with agent delegation |
+| `ship-agent` | T2 | haiku | 4 | Archive with lessons learned |
 | `iterate-agent` | T2 | sonnet | All | Update documents with cascade awareness |
 
 ### 2. Architect (6 agents)
