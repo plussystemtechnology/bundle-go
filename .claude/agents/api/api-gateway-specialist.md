@@ -83,6 +83,8 @@ import (
     "golang.org/x/time/rate"
 )
 
+// NOTE: limiters map grows unbounded. In production, use a TTL-based
+// eviction (e.g., sync.Map with periodic cleanup) or Redis-based rate limiting.
 type IPRateLimiter struct {
     limiters map[string]*rate.Limiter
     mu       sync.RWMutex
@@ -104,9 +106,12 @@ func (rl *IPRateLimiter) getLimiter(ip string) *rate.Limiter {
     rl.mu.RUnlock()
 
     if !exists {
-        limiter = rate.NewLimiter(rl.rate, rl.burst)
         rl.mu.Lock()
-        rl.limiters[ip] = limiter
+        // Double-check after acquiring write lock
+        if limiter, exists = rl.limiters[ip]; !exists {
+            limiter = rate.NewLimiter(rl.rate, rl.burst)
+            rl.limiters[ip] = limiter
+        }
         rl.mu.Unlock()
     }
     return limiter

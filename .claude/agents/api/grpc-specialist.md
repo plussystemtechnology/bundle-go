@@ -285,6 +285,7 @@ func NewGRPCServer(authInterceptor grpc.UnaryServerInterceptor) *grpc.Server {
         ),
         grpc.ChainStreamInterceptor(
             grpcrecovery.StreamServerInterceptor(),
+            authStreamInterceptor,
             grpclogging.StreamServerInterceptor(loggerAdapter()),
         ),
     )
@@ -372,7 +373,7 @@ func NewGatewayMux(ctx context.Context, grpcAddr string) (http.Handler, error) {
         }),
     )
 
-    opts := []grpc.DialOption{grpc.WithTransportCredentials(insecure.NewCredentials())}
+    opts := []grpc.DialOption{grpc.WithTransportCredentials(insecure.NewCredentials())} // WARNING: insecure credentials — use TLS in production
     if err := orderv1.RegisterOrderServiceHandlerFromEndpoint(ctx, mux, grpcAddr, opts); err != nil {
         return nil, fmt.Errorf("registering order gateway: %w", err)
     }

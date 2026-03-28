@@ -192,7 +192,7 @@ type ListProductsResponse struct {
 type ErrorResponse struct {
     Error   string            `json:"error"`              // human-readable message
     Code    string            `json:"code"`               // SCREAMING_SNAKE_CASE machine code
-    Details map[string]string `json:"details,omitempty"   // field-level validation errors
+    Details map[string]string `json:"details,omitempty"` // field-level validation errors
 }
 
 // Error code conventions
