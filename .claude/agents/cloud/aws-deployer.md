@@ -217,12 +217,15 @@ docker push "${ECR_URI}/${SERVICE_NAME}:latest"
         }
       },
       "healthCheck": {
-        "command": ["CMD-SHELL", "curl -f http://localhost:8080/healthz || exit 1"],
+        "command": ["CMD", "/app/api", "healthcheck"],
         "interval": 30,
         "timeout": 5,
         "retries": 3,
         "startPeriod": 10
       }
+      // Note: distroless images have no shell or curl. Use the binary's own healthcheck
+      // subcommand (above) or rely on ALB target group health checks instead of
+      // container-level CMD-SHELL checks.
     }
   ]
 }

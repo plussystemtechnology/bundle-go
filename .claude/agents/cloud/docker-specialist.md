@@ -231,8 +231,6 @@ docs/
 
 ```yaml
 # docker-compose.yml output example
-version: "3.9"
-
 services:
   api:
     build:

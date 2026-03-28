@@ -197,7 +197,7 @@ jobs:
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v6
         with:
-          version: latest
+          version: v1.62.2
           args: --timeout=5m
 
   test:
@@ -408,7 +408,6 @@ linters:
     - errcheck
     - gosimple
     - ineffassign
-    - unused
     - misspell
     - gofmt
     - goimports
