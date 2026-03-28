@@ -4,7 +4,7 @@
 
 **Date:** 2026-03-27
 **Status:** Draft
-**Module:** `github.com/noxcare/bundle-go` (plugin canonical name; target project uses `github.com/plussystemtechnology/is-person`)
+**Module:** `github.com/plussystemtechnology/bundle-go` (plugin canonical name; target project uses `github.com/plussystemtechnology/is-person`)
 
 ---
 
