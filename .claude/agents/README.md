@@ -1,6 +1,6 @@
-# NoxCare-Go Agents
+# Bundle-Go Agents
 
-NoxCare-Go deploys **43 specialized agents** across **8 categories**, each built on a **three-tier template system** with mandatory **KB-First knowledge resolution**. Every agent carries a cognitive framework that enforces structured confidence scoring, provenance tracking, and explicit stop conditions -- turning raw LLM capability into disciplined, auditable Go backend expertise.
+Bundle-Go deploys **43 specialized agents** across **8 categories**, each built on a **three-tier template system** with mandatory **KB-First knowledge resolution**. Every agent carries a cognitive framework that enforces structured confidence scoring, provenance tracking, and explicit stop conditions -- turning raw LLM capability into disciplined, auditable Go backend expertise.
 
 `43 agents | 8 categories | 3 tiers (T1/T2/T3) | Clean Architecture | KB-First`
 
@@ -8,7 +8,7 @@ NoxCare-Go deploys **43 specialized agents** across **8 categories**, each built
 
 ## How Agents Work (Cognitive Architecture)
 
-NoxCare-Go agents are not raw LLM prompts. They operate through a three-layer cognitive architecture that separates routing, reasoning, and domain knowledge.
+Bundle-Go agents are not raw LLM prompts. They operate through a three-layer cognitive architecture that separates routing, reasoning, and domain knowledge.
 
 ### Layer 1: Claude Code Orchestrator (Router)
 

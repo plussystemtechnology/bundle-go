@@ -434,7 +434,7 @@ linters-settings:
     disable:
       - shadow  # too many false positives with err
   goimports:
-    local-prefixes: "github.com/your-org"
+    local-prefixes: "github.com/plussystemtechnology"
 
 issues:
   exclude-rules:
