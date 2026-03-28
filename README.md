@@ -24,7 +24,7 @@ Go backend development with AI assistants produces inconsistent results: wrong a
 Bundle-Go brings **Spec-Driven Development (SDD)** to Go Backend/API on Claude Code. A 5-phase workflow, 43 specialized agents, 22 KB domains, and 23 commands — all tuned for Go.
 
 ```
-/brainstorm → /define → /design → /build → /ship
+/bundle-go:workflow:brainstorm → /bundle-go:workflow:define → /bundle-go:workflow:design → /bundle-go:workflow:build → /bundle-go:workflow:ship
 ```
 
 Every phase understands Go: Clean Architecture layers, Gin handlers, sqlc queries, pgx pools, Kafka consumers, gRPC services. Quality gates run automatically: `golangci-lint`, `go vet`, `go test -race`, `staticcheck`.
@@ -33,11 +33,23 @@ Every phase understands Go: Clean Architecture layers, Gin handlers, sqlc querie
 
 ## Quick Start
 
-```bash
-# Clone the plugin
-git clone https://github.com/plussystemtechnology/bundle-go
+### Install via Claude Code Marketplace (recommended)
 
-# Copy the framework into your Go project
+```bash
+/plugin marketplace add plussystemtechnology/bundle-go
+/plugin install bundle-go@bundle-go
+```
+
+### Install via skills.sh
+
+```bash
+npx skills add plussystemtechnology/bundle-go
+```
+
+### Manual install
+
+```bash
+git clone https://github.com/plussystemtechnology/bundle-go
 cp -r bundle-go/.claude your-go-project/.claude
 ```
 
@@ -45,47 +57,47 @@ cp -r bundle-go/.claude your-go-project/.claude
 
 ```bash
 # Phase 0 — Explore an idea (optional)
-/brainstorm "Add JWT authentication middleware"
+/bundle-go:workflow:brainstorm "Add JWT authentication middleware"
 
 # Phase 1 — Capture requirements
-/define JWT_AUTH
+/bundle-go:workflow:define JWT_AUTH
 
 # Phase 2 — Design the architecture
-/design JWT_AUTH
+/bundle-go:workflow:design JWT_AUTH
 
 # Phase 3 — Build it
-/build JWT_AUTH
+/bundle-go:workflow:build JWT_AUTH
 
 # Phase 4 — Ship when complete
-/ship JWT_AUTH
+/bundle-go:workflow:ship JWT_AUTH
 ```
 
 ### Go Engineering Commands
 
 ```bash
 # Scaffold a Gin handler
-/handler "POST /auth/login with JWT response"
+/bundle-go:go-engineering:handler "POST /auth/login with JWT response"
 
 # Generate a service layer
-/service "AuthService with login and refresh token"
+/bundle-go:go-engineering:service "AuthService with login and refresh token"
 
 # Create a sqlc repository
-/repository "UserRepository with CRUD operations"
+/bundle-go:go-engineering:repository "UserRepository with CRUD operations"
 
 # Generate a Kafka consumer
-/kafka-consumer "OrderCreatedConsumer with dead-letter queue"
+/bundle-go:go-engineering:kafka-consumer "OrderCreatedConsumer with dead-letter queue"
 
 # Add Swagger annotations
-/swagger internal/adapter/http/handler/auth.go
+/bundle-go:go-engineering:swagger internal/adapter/http/handler/auth.go
 
 # Generate a gRPC service
-/proto "UserService with GetUser and ListUsers"
+/bundle-go:go-engineering:proto "UserService with GetUser and ListUsers"
 
 # Gin middleware
-/middleware "RateLimiter with Redis backend"
+/bundle-go:go-engineering:middleware "RateLimiter with Redis backend"
 
 # SQL migration
-/migration "create users table with soft delete"
+/bundle-go:go-engineering:migration "create users table with soft delete"
 ```
 
 ---
@@ -96,11 +108,11 @@ cp -r bundle-go/.claude your-go-project/.claude
 
 | Phase | Command | What It Does | Quality Gate |
 |-------|---------|-------------|--------------|
-| 0 — Brainstorm | `/brainstorm` | Explore ideas before committing to requirements | — |
-| 1 — Define | `/define` | Capture and validate requirements | Requirements checklist |
-| 2 — Design | `/design` | Architecture, API contracts, DB schema | Layer import rules |
-| 3 — Build | `/build` | Implement with agent delegation | golangci-lint, go test -race |
-| 4 — Ship | `/ship` | Archive feature with lessons learned | Full test suite |
+| 0 — Brainstorm | `/bundle-go:workflow:brainstorm` | Explore ideas before committing to requirements | — |
+| 1 — Define | `/bundle-go:workflow:define` | Capture and validate requirements | Requirements checklist |
+| 2 — Design | `/bundle-go:workflow:design` | Architecture, API contracts, DB schema | Layer import rules |
+| 3 — Build | `/bundle-go:workflow:build` | Implement with agent delegation | golangci-lint, go test -race |
+| 4 — Ship | `/bundle-go:workflow:ship` | Archive feature with lessons learned | Full test suite |
 
 ### 43 Specialized Agents
 
@@ -127,20 +139,20 @@ cp -r bundle-go/.claude your-go-project/.claude
 
 | Category | Commands |
 |----------|---------|
-| SDD Workflow (7) | `/brainstorm`, `/define`, `/design`, `/build`, `/ship`, `/iterate`, `/create-pr` |
-| Go Engineering (10) | `/handler`, `/service`, `/repository`, `/migration`, `/middleware`, `/proto`, `/kafka-consumer`, `/swagger`, `/security-scan`, `/go-review` |
-| Core Utilities (4) | `/meeting`, `/memory`, `/readme-maker`, `/sync-context` |
-| Knowledge (1) | `/create-kb` |
-| Review (1) | `/review` |
+| SDD Workflow (7) | `/bundle-go:workflow:brainstorm`, `/bundle-go:workflow:define`, `/bundle-go:workflow:design`, `/bundle-go:workflow:build`, `/bundle-go:workflow:ship`, `/bundle-go:workflow:iterate`, `/bundle-go:workflow:create-pr` |
+| Go Engineering (10) | `/bundle-go:go-engineering:handler`, `/bundle-go:go-engineering:service`, `/bundle-go:go-engineering:repository`, `/bundle-go:go-engineering:migration`, `/bundle-go:go-engineering:middleware`, `/bundle-go:go-engineering:proto`, `/bundle-go:go-engineering:kafka-consumer`, `/bundle-go:go-engineering:swagger`, `/bundle-go:go-engineering:security-scan`, `/bundle-go:go-engineering:go-review` |
+| Core Utilities (4) | `/bundle-go:core:meeting`, `/bundle-go:core:memory`, `/bundle-go:core:readme-maker`, `/bundle-go:core:sync-context` |
+| Knowledge (1) | `/bundle-go:knowledge:create-kb` |
+| Review (1) | `/bundle-go:review:review` |
 
 ---
 
 ## How It Works
 
-When you run `/build`, the build agent reads your design document and delegates to the right specialist:
+When you run `/bundle-go:workflow:build`, the build agent reads your design document and delegates to the right specialist:
 
 ```
-/design JWT_AUTH
+/bundle-go:workflow:design JWT_AUTH
         │
         ▼
   design-agent
@@ -152,7 +164,7 @@ When you run `/build`, the build agent reads your design document and delegates 
         ├──► middleware-builder  → internal/adapter/http/middleware/jwt.go
         └──► auth-specialist     → token generation, validation, refresh
 
-/build JWT_AUTH
+/bundle-go:workflow:build JWT_AUTH
         │
         ▼
   build-agent
