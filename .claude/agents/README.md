@@ -191,9 +191,9 @@ HTTP, gRPC, authentication, and API documentation specialists.
 | `gin-specialist` | T3 | sonnet | Gin framework deep expertise, routing, engine configuration |
 | `grpc-specialist` | T3 | sonnet | gRPC service definitions, protobuf, streaming, interceptors |
 | `rest-designer` | T2 | sonnet | RESTful API design, status codes, resource modeling |
-| `auth-specialist` | T2 | sonnet | JWT, OAuth2, middleware-based auth, RBAC patterns |
-| `swagger-builder` | T2 | sonnet | OpenAPI 3.0 spec generation, swaggo annotations |
-| `api-gateway-specialist` | T2 | sonnet | API gateway patterns, rate limiting, request routing |
+| `auth-specialist` | T2 | opus | JWT, OAuth2, OIDC, Vault secrets, RBAC patterns |
+| `swagger-builder` | T1 | sonnet | OpenAPI 3.0 spec generation, swaggo annotations |
+| `api-gateway-specialist` | T1 | sonnet | API gateway patterns, rate limiting, request routing |
 
 ### 5. Data (6 agents)
 
@@ -206,7 +206,7 @@ Database, messaging, and caching layer specialists.
 | `migration-specialist` | T2 | sonnet | golang-migrate, schema versioning, rollback strategy |
 | `kafka-specialist` | T3 | sonnet | Kafka producers/consumers, sarama/confluent-kafka-go, topics |
 | `cache-specialist` | T2 | sonnet | Redis caching patterns, go-redis, TTL strategy, cache invalidation |
-| `event-store-specialist` | T2 | sonnet | Event sourcing, outbox pattern, event replay, CQRS |
+| `event-store-specialist` | T1 | sonnet | Event sourcing, outbox pattern, event replay, CQRS |
 
 ### 6. Cloud (4 agents)
 
@@ -216,7 +216,7 @@ Deployment, containerization, and CI/CD pipeline specialists.
 |-------|------|-------|---------|
 | `k8s-specialist` | T3 | sonnet | Kubernetes manifests, Helm charts, health probes, scaling |
 | `docker-specialist` | T2 | sonnet | Multi-stage Dockerfiles, compose, image optimization |
-| `aws-deployer` | T3 | sonnet | ECS, ECR, RDS, ElastiCache, IAM, infrastructure as code |
+| `aws-deployer` | T2 | sonnet | ECS, ECR, RDS, ElastiCache, IAM, infrastructure as code |
 | `ci-cd-specialist` | T3 | sonnet | GitHub Actions, pipeline automation, test/build/deploy stages |
 
 ### 7. Observability (4 agents)
@@ -237,9 +237,9 @@ Testing, benchmarking, security, and code review specialists.
 | Agent | Tier | Model | Purpose |
 |-------|------|-------|---------|
 | `test-generator` | T2 | sonnet | Go unit tests, table-driven tests, mocks with testify |
-| `benchmark-specialist` | T2 | sonnet | Go benchmarks, profiling, pprof, performance analysis |
+| `benchmark-specialist` | T1 | sonnet | Go benchmarks, profiling, pprof, performance analysis |
 | `integration-test-specialist` | T2 | sonnet | Integration tests, testcontainers-go, DB fixtures |
-| `security-scanner` | T2 | sonnet | SAST with gosec, dependency audits, secrets detection |
+| `security-scanner` | T1 | sonnet | SAST with gosec, dependency audits, secrets detection |
 | `code-reviewer` | T2 | sonnet | Code review for quality, security, and Clean Architecture |
 
 ---
