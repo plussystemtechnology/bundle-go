@@ -1,0 +1,21 @@
+{
+  "name": "bundle-go",
+  "owner": {
+    "name": "Plus System Technology"
+  },
+  "metadata": {
+    "description": "Go Backend/API development with Clean Architecture and SDD workflow",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "bundle-go",
+      "source": "./",
+      "description": "43 agents, 23 commands, 22 KB domains for Go Backend/API with Clean Architecture",
+      "version": "1.0.0",
+      "category": "development",
+      "tags": ["go", "golang", "clean-architecture", "backend", "api"],
+      "strict": false
+    }
+  ]
+}
