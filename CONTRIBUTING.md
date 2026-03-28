@@ -1,14 +1,14 @@
-# Contributing to NoxCare-Go
+# Contributing to Bundle-Go
 
-Thank you for your interest in contributing. NoxCare-Go is a Claude Code plugin — contributions improve Go Backend/API development for everyone using it.
+Thank you for your interest in contributing. Bundle-Go is a Claude Code plugin — contributions improve Go Backend/API development for everyone using it.
 
 ---
 
 ## Quick Start
 
 ```bash
-git clone https://github.com/your-org/noxcare-go
-cd noxcare-go
+git clone https://github.com/plussystemtechnology/bundle-go
+cd bundle-go
 # The entire framework lives in .claude/
 ```
 

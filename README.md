@@ -1,4 +1,4 @@
-# NoxCare-Go
+# Bundle-Go
 
 > Claude Code plugin for Go Backend/API development with Clean Architecture
 
@@ -21,7 +21,7 @@ Go backend development with AI assistants produces inconsistent results: wrong a
 
 ## The Solution
 
-NoxCare-Go brings **Spec-Driven Development (SDD)** to Go Backend/API on Claude Code. A 5-phase workflow, 43 specialized agents, 22 KB domains, and 23 commands — all tuned for Go.
+Bundle-Go brings **Spec-Driven Development (SDD)** to Go Backend/API on Claude Code. A 5-phase workflow, 43 specialized agents, 22 KB domains, and 23 commands — all tuned for Go.
 
 ```
 /brainstorm → /define → /design → /build → /ship
@@ -35,10 +35,10 @@ Every phase understands Go: Clean Architecture layers, Gin handlers, sqlc querie
 
 ```bash
 # Clone the plugin
-git clone https://github.com/your-org/noxcare-go
+git clone https://github.com/plussystemtechnology/bundle-go
 
 # Copy the framework into your Go project
-cp -r noxcare-go/.claude your-go-project/.claude
+cp -r bundle-go/.claude your-go-project/.claude
 ```
 
 ### SDD Workflow
