@@ -1,0 +1,12 @@
+{
+  "name": "bundle-go",
+  "description": "Claude Code plugin for Go Backend/API development with Clean Architecture and SDD workflow. 43 agents, 23 commands, 22 KB domains.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Plus System Technology"
+  },
+  "homepage": "https://github.com/plussystemtechnology/bundle-go",
+  "repository": "https://github.com/plussystemtechnology/bundle-go",
+  "license": "MIT",
+  "keywords": ["go", "golang", "clean-architecture", "backend", "api", "sdd"]
+}
