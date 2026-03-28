@@ -1,6 +1,6 @@
-# NoxCare-Go Architecture
+# Bundle-Go Architecture
 
-> Visual reference for the NoxCare-Go 5-phase SDD workflow and Go Clean Architecture
+> Visual reference for the Bundle-Go 5-phase SDD workflow and Go Clean Architecture
 
 ---
 
@@ -8,7 +8,7 @@
 
 ```text
 +----------------------------------------------------------------------------------------------------------+
-|                                   NOXCARE-GO 5-PHASE PIPELINE                                            |
+|                                   BUNDLE-GO 5-PHASE PIPELINE                                            |
 +----------------------------------------------------------------------------------------------------------+
 |                                                                                                           |
 |   PHASE 0              PHASE 1              PHASE 2              PHASE 3              PHASE 4            |
@@ -506,4 +506,4 @@ Import Rules (enforced by ./scripts/check_arch.sh):
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 1.0.0 | 2026-03-27 | Initial NoxCare-Go port from AgentSpec v2.1.0 |
+| 1.0.0 | 2026-03-27 | Initial Bundle-Go port from AgentSpec v2.1.0 |

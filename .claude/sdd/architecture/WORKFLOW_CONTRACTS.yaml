@@ -1,11 +1,11 @@
-# NoxCare-Go - Workflow Contracts
+# Bundle-Go - Workflow Contracts
 # 5-Phase Development Workflow with Agent Matching and Delegation
 # Go Backend API with Clean Architecture
 # Version: 1.0.0
 # Date: 2026-03-27
 
 version: "1.0.0"
-name: "NoxCare-Go"
+name: "Bundle-Go"
 description: "5-phase spec-driven development workflow with agent orchestration for Go backend API using Clean Architecture"
 
 # =============================================================================
@@ -953,7 +953,7 @@ version_history:
   - version: "1.0.0"
     date: "2026-03-27"
     changes:
-      - "Initial NoxCare-Go port from AgentSpec v2.1.0"
+      - "Initial Bundle-Go port from AgentSpec v2.1.0"
       - "Go Clean Architecture gate with 8 layer import rules"
       - "43 Go-specialized agents across 8 categories"
       - "go_delegation map with 26 file-pattern-to-agent entries"

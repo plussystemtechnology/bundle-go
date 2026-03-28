@@ -1,4 +1,4 @@
-# NoxCare-Go SDD Framework
+# Bundle-Go SDD Framework
 
 > **Spec-Driven Development for Go Backend API on Claude Code**
 >
@@ -10,7 +10,7 @@
 
 | Aspect | Details |
 |--------|---------|
-| **Project** | NoxCare-Go - Spec-Driven Development Framework |
+| **Project** | Bundle-Go - Spec-Driven Development Framework |
 | **Tagline** | Spec-Driven Development for Go Clean Architecture |
 | **Business Problem** | Gap between unstructured "vibe coding" and stale traditional specifications |
 | **Solution** | 5-phase workflow with 43 specialized AI agents, 15+ KB domains, and 23 commands |
@@ -19,11 +19,11 @@
 
 ### What This Is
 
-NoxCare-Go transforms requirements into working Go code with full traceability. It provides a structured 5-phase development workflow (Brainstorm -> Define -> Design -> Build -> Ship) powered by specialized AI agents that match to tasks automatically, enforcing Clean Architecture import boundaries at every step.
+Bundle-Go transforms requirements into working Go code with full traceability. It provides a structured 5-phase development workflow (Brainstorm -> Define -> Design -> Build -> Ship) powered by specialized AI agents that match to tasks automatically, enforcing Clean Architecture import boundaries at every step.
 
 **The Core Insight:** *"The AI doesn't just need to know WHAT to build - it needs to know WHO should build each part and WHERE it belongs in the architecture."*
 
-Traditional specs produce a task list. NoxCare-Go produces a **team assignment** with **architecture compliance**.
+Traditional specs produce a task list. Bundle-Go produces a **team assignment** with **architecture compliance**.
 
 ### Key Insights
 
@@ -47,7 +47,7 @@ Traditional specs produce a task list. NoxCare-Go produces a **team assignment**
 8. [Phase Details](#phase-details)
 9. [Quality Verification](#quality-verification)
 10. [Anti-Patterns](#anti-patterns)
-11. [Extending NoxCare-Go](#extending-noxcare-go)
+11. [Extending Bundle-Go](#extending-bundle-go)
 12. [Quick Start](#quick-start)
 13. [References](#references)
 14. [Version History](#version-history)
@@ -93,7 +93,7 @@ Traditional specs produce a task list. NoxCare-Go produces a **team assignment**
 
 ```text
 +---------------------------------------------------------------------------------------------------------+
-|                                    NOXCARE-GO PIPELINE                                                   |
+|                                    BUNDLE-GO PIPELINE                                                   |
 +---------------------------------------------------------------------------------------------------------+
 |                                                                                                          |
 |  +----------+    +----------+    +--------------+    +---------------+    +----------+                   |
@@ -174,7 +174,7 @@ Traditional specs produce a task list. NoxCare-Go produces a **team assignment**
 
 ## Clean Architecture Gate
 
-The most important constraint in NoxCare-Go. All agents and the CI pipeline enforce these rules:
+The most important constraint in Bundle-Go. All agents and the CI pipeline enforce these rules:
 
 ```text
 +----------------------------------------------------------------------------------------+
@@ -208,7 +208,7 @@ The most important constraint in NoxCare-Go. All agents and the CI pipeline enfo
 
 ## The Agent Ecosystem
 
-NoxCare-Go leverages **43 specialized agents** across 8 categories:
+Bundle-Go leverages **43 specialized agents** across 8 categories:
 
 ### By Category
 
@@ -284,7 +284,7 @@ db/sqlc.yaml                              -> sqlc-specialist
 
 ## Knowledge Base Integration
 
-NoxCare-Go integrates with curated Knowledge Base domains for the Go backend stack:
+Bundle-Go integrates with curated Knowledge Base domains for the Go backend stack:
 
 ### Available Domains
 
@@ -616,7 +616,7 @@ You're about to make a mistake if:
 
 ---
 
-## Extending NoxCare-Go
+## Extending Bundle-Go
 
 ### Adding a New Agent
 
@@ -746,13 +746,13 @@ touch .claude/kb/otel/{index.md,quick-reference.md}
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 1.0.0 | 2026-03-27 | Initial NoxCare-Go port from AgentSpec v2.1.0 with Go Clean Architecture |
+| 1.0.0 | 2026-03-27 | Initial Bundle-Go port from AgentSpec v2.1.0 with Go Clean Architecture |
 
 ---
 
 ## The Agentic-First Vision
 
-NoxCare-Go is designed for a future where:
+Bundle-Go is designed for a future where:
 
 1. **AI models are specialists** -- Not one-size-fits-all, but domain experts
 2. **Specifications are executable** -- Not just documentation, but orchestration
@@ -761,7 +761,7 @@ NoxCare-Go is designed for a future where:
 5. **Traceability is automatic** -- Every file has an owner, every decision has rationale
 6. **Go is first-class** -- Idiomatic patterns, explicit errors, and no shortcuts
 
-**NoxCare-Go is not just a specification framework. It's an AI team orchestration system for Go backend development.**
+**Bundle-Go is not just a specification framework. It's an AI team orchestration system for Go backend development.**
 
 ```text
 +-------------------------------------------------------------+
@@ -769,11 +769,11 @@ NoxCare-Go is designed for a future where:
 |   "Tell me WHAT to build, I'll figure out WHO should         |
 |    build it -- in the right Clean Architecture layer."       |
 |                                                               |
-|                         -- NoxCare-Go v1.0                    |
+|                         -- Bundle-Go v1.0                    |
 |                                                               |
 +-------------------------------------------------------------+
 ```
 
 ---
 
-*Document Updated: 2026-03-27 | NoxCare-Go v1.0.0*
+*Document Updated: 2026-03-27 | Bundle-Go v1.0.0*

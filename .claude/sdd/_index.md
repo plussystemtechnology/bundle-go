@@ -1,4 +1,4 @@
-# NoxCare-Go
+# Bundle-Go
 
 > 5-phase spec-driven development workflow for Go backend API with Clean Architecture.
 > *"Brainstorm -> Define -> Design -> Build -> Ship"*
@@ -7,9 +7,9 @@
 
 ## Overview
 
-NoxCare-Go provides Agent Matching (Design phase) and Agent Delegation (Build phase) specialized for Go backend development with Gin, sqlc, pgx, Kafka, Redis, and Clean Architecture.
+Bundle-Go provides Agent Matching (Design phase) and Agent Delegation (Build phase) specialized for Go backend development with Gin, sqlc, pgx, Kafka, Redis, and Clean Architecture.
 
-| Traditional Approach | NoxCare-Go SDD |
+| Traditional Approach | Bundle-Go SDD |
 |---------------------|----------------|
 | 8 phases | **5 phases** (Brainstorm optional) |
 | 3 development modes | **1 unified stream** |
