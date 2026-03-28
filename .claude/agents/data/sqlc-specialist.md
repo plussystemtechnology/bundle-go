@@ -342,12 +342,11 @@ func (r *OrderRepository) CreateOrderWithItems(
     }
 
     for _, item := range items {
-        if err := q.BulkInsertOrderItem(ctx, BulkInsertOrderItemParams{
-            ID:        item.ID(),
-            OrderID:   order.ID(),
-            ProductID: item.ProductID(),
-            Quantity:  item.Quantity(),
-            UnitPrice: item.UnitPrice(),
+        if err := q.InsertOrderItem(ctx, db.InsertOrderItemParams{
+            OrderID:    order.ID(),
+            ProductID:  item.ProductID(),
+            Quantity:   item.Quantity(),
+            PriceCents: item.PriceCents(),
         }); err != nil {
             return fmt.Errorf("insert order item: %w", err)
         }

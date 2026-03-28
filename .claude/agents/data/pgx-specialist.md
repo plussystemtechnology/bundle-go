@@ -230,6 +230,7 @@ config.AfterConnect = func(ctx context.Context, conn *pgx.Conn) error {
         name string
         sql  string
     }{
+        // Prepared statements for dynamic queries that cannot be expressed via sqlc
         {"get_order_by_id", "SELECT id, customer_id, status FROM orders WHERE id = $1"},
         {"list_orders_by_customer", "SELECT id, status FROM orders WHERE customer_id = $1 LIMIT $2 OFFSET $3"},
     }

@@ -368,7 +368,9 @@ func (c *OrderConsumer) processIdempotent(ctx context.Context, msg kafka.Message
     if err := c.handler.Handle(ctx, msg); err != nil {
         return fmt.Errorf("handle event: %w", err)
     }
-    c.dedupeStore.Set(ctx, eventID, 24*time.Hour)
+    if err := c.dedupeStore.Set(ctx, eventID, 24*time.Hour); err != nil {
+        return fmt.Errorf("store dedup key: %w", err)
+    }
     return c.reader.CommitMessages(ctx, msg)
 }
 ```

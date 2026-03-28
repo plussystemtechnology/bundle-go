@@ -330,7 +330,7 @@ func (r *RateLimiter) Allow(ctx context.Context, key string) (bool, int, error) 
 
     pipe := r.client.Pipeline()
     pipe.ZRemRangeByScore(ctx, rateLimitKey, "0", fmt.Sprintf("%d", windowStart))
-    pipe.ZAdd(ctx, rateLimitKey, redis.Z{Score: float64(now), Member: now})
+    pipe.ZAdd(ctx, rateLimitKey, redis.Z{Score: float64(now), Member: fmt.Sprintf("%d-%s", now, uuid.New().String())})
     pipe.ZCard(ctx, rateLimitKey)
     pipe.Expire(ctx, rateLimitKey, r.window)
 
@@ -339,7 +339,11 @@ func (r *RateLimiter) Allow(ctx context.Context, key string) (bool, int, error) 
         return true, r.limit, fmt.Errorf("rate limiter pipeline: %w", err) // fail open
     }
 
-    count := int(results[2].(*redis.IntCmd).Val())
+    intCmd, ok := results[2].(*redis.IntCmd)
+    if !ok {
+        return false, 0, fmt.Errorf("unexpected pipeline result type")
+    }
+    count := int(intCmd.Val())
     allowed := count <= r.limit
     remaining := r.limit - count
     if remaining < 0 {
